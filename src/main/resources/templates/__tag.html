@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link  rel="stylesheet" th:href="@{/css/__tag.css}">
+
+</head>
+<body>
+<div>
+    <p class="label-tag"><span th:text="${session.username}"></span></p>
+    <ol>
+        <li><a id="create-new-post" th:href="@{/post/create}"> Create new post</a></li>
+        <li><a id="manage-post-control" th:href="@{/post/list}" > Manage Post</a></li>
+        <li><a> Approve Comments</a></li>
+        <li><a th:href="@{/logout}"> Logout </a></li>
+    </ol>
+</div>
+<br>
+
+<div>
+    <p class="label-tag"> Tags</p>
+    <a th:href="@{/}" >blog </a>
+    <a th:href="@{/}" > test</a>
+</div>
+<br><br>
+
+
+<div>
+    <p class="label-tag"> Recent Comments</p>
+    Tester on <a th:href="@{/}">A Test Post</a>
+</div>
+
+
+</body>
+</html>

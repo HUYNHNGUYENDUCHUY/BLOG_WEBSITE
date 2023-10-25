@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/contact-page.css}" rel="stylesheet">
+</head>
+<body>
+<div class="__header" th:include="__header">
+</div>
+
+<div style="margin-left:20px">
+    <div class="header">
+        <br>
+        <h1>Contacts Us</h1>
+        <br>
+        <span>Please fill out the following form with your login credentials </span>
+        <br>
+        <span>Fields with * are required</span>
+        <br>
+        <br>
+    </div>
+    <div class="form-contacts">
+        <label for="name">Name</label>
+        <input id="name" name="name">
+        <label for="email">Email</label>
+        <input id="email" name="email">
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject">
+        <label for="body"> Body</label>
+        <textarea id="body" name="body"></textarea>
+        <button type="submit" id="btn-contact">Submit</button>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+
+.head-page>span{
+    display: inline-block;
+   font-size: 30px;
+    color: #555555;
+    padding-left: 10px;
+    padding-top:15px;
+}
+.menu{
+    height: 5%;
+    width: 100%;
+    background-color: #65A5CC;
+}
+.menu>a{
+    height: 75%;
+    text-decoration: none;
+    color: white;
+    margin-top: 2px;
+    padding-top: 6px;
+    margin-left: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: 600;
+}
+.menu>a:active{
+    background-color: black;
+}
+.home-container {
+    display: flex;
+
+}
+.home-form-left{
+    margin-left: 20px;
+    width: 75%;
+}
+.headline{
+    color: #55557A;
+    font-size: 35px;
+    margin-top: 30px;
+}
+

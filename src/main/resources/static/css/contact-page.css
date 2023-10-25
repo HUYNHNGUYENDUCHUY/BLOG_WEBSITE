@@ -1,0 +1,18 @@
+
+.form-contacts input{
+    width: 200px;
+    height: 15px;
+}
+.form-contacts label{
+    display: block;
+    margin-top: 10px;
+}
+.form-contacts textarea{
+    width: 400px;
+    height: 50px;
+}
+#btn-contact{
+    padding: 2px 5px;
+    display: block;
+    margin-top: 30px;
+}

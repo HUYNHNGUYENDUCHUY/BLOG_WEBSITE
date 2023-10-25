@@ -1,0 +1,56 @@
+.manage-post-container{
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+}
+.manage-post-header{
+    display: inline-block;
+    width: 75%;
+}
+.manage-post-form{
+    width: 100%;
+}
+
+
+.manage-post-form input {
+    width: 200px;
+    height: 15px;
+}
+
+.manage-post-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.manage-post-form textarea {
+    width: 400px;
+    height: 100px;
+}
+
+
+.manage-post-form-right{
+    margin-left: 70px;
+    margin-top: 30px;
+}
+.manage-post-form-right div{
+    background-color: #EFFDFF;
+}
+table{
+    width: 95%;
+}
+.list-content{
+    min-width: 1050px;
+    max-width: 1200px;
+}
+.manage-post-header table,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.list-content tr {
+    display: grid;
+    grid-template-columns: 15% 50% 25% 10%;
+}
+td span {
+    margin-left: 5px;
+}
+

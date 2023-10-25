@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/login-page.css}">
+<!--    <script th:src="@{/js/jquery-1.11.1.min.js}"></script>-->
+<!--    <script th:src="@{/js/login-page.js}"></script>-->
+<!--    <script th:src="@{/js/home.js}"></script>-->
+</head>
+<body>
+<div class="__header" th:include="__header">
+</div>
+<div class="login-container">
+    <div id="login-header">
+        <br>
+        <div class="login-header">
+            <h1 th:text="${#session == null ? 'Login':'Logout'}">Login</h1>
+            <br>
+            <span>Please fill out the following form with your login credentials </span>
+            <br>
+            <span>Fields with * are required</span>
+        </div>
+        <br>
+        <div class="login-form">
+            <form th:action="@{${#session == null ? '/user/login ': '/logout'}}" method="post" th:object="${user}">
+            <label for="user-name">User Name</label>
+            <input name="username" id="user-name" class="user-name"/>
+            <br>
+            <label for="password">Password </label>
+            <input name="password" id="password" class="password">
+            <br>
+            <input type="checkbox" name="rememberMe" id="remember-me"><label for="remember-me"
+                                                                             style="display: inline-block">remember me
+            next time</label>
+
+            <button id="btn-login" class="login-button" type="submit" th:text="${#session == null ? 'Login':'Logout'}"> Login</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

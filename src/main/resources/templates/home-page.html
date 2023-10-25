@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/home-page.css}"/>
+    <script th:src="@{/js/jquery-1.11.1.min.js}"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="body-page">
+        <div class="__header" th:include="__header">
+        </div>
+        <div>
+            <div class="home-container">
+                <div class="home-form-left" >
+                    <th:block th:each="element: ${listPost}">
+                    <div class="text-content" >
+                        <p class="headline" th:text="${element.getTitle()}">Welcome!</p>
+                        <hr>
+                        <p class="content">posted by <span th:text="${#session.getAttribute('username')}"></span><span th:text="${element.getFormatCreateTime()}"></span></p>
+                        <p class="content" th:text="${element.getContent()}">This blog system is developed using Yil . It is meant to demonstrate This
+                            blog system is developed using Yil . It is meant to demonstrate This blog system is
+                            developed using Yil . It is meant to demonstrate This blog system is developed using Yil .
+                            It is meant to demonstrate</p>
+                        <br>
+                        <p class="content" th:text="${element.getStatus()}">This blog system is developed using Yil . It is meant to demonstrate This
+                            blog system is developed using Yil </p>
+                    </div>
+                    <div class="text-tag">
+                        <span>Tags:</span><a th:href="@{/}" th:text="${element.getTags()}">blog</a><br>
+                        <a th:href="@{/}">Permalink</a>|<a th:href="@{/}">Comments(0)</a>|<span>last update <span th:text="${#session.getAttribute('username')}"></span> <span th:text="${element.getFormatUpdateTime()== null? element.getFormatCreateTime() : element.getFormatUpdateTime()}"></span></span>
+                    </div>
+                    </th:block>
+                </div>
+                <div class="home-form-right">
+                    <div th:include="__tag"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

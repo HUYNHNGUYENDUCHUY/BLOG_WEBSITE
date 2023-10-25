@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/__header.css}">
+</head>
+<body>
+<div class="head-page">
+    <span class="head-content">Blog</span>
+</div>
+<div class="menu">
+    <a id="home" th:href="@{/user/home}">Home</a>
+    <a id="about" th:href="@{/user/about}">About</a>
+    <a id="contact" th:href="@{/user/contact}">Contact</a>
+    <a id="login" th:href="@{/user/login}" th:text="${#session == null ? 'Login':'Logout'}">Login</a>
+</div>
+<div style="margin-left: 20px;margin-top: 20px">
+    <a th:href="@{/}" id="taskbar">Home >></a> <span id="click-choice-page" th:text="${choice}" >Login</span>
+</div>
+</body>
+</html>
